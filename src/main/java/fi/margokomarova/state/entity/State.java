@@ -6,6 +6,8 @@ public final class State {
     private static State instance;
     private String name;
     private Region [] regions;
+    private String capital;
+    private double square;
 
 public State(){
     name=getRandomWord(6);
@@ -15,7 +17,30 @@ public State(){
         regions[i] = new Region();
     }
     this.regions=regions;
+    this.capital=capital;
+    this.square=square;
 }
+    public Region[]getRegions() {
+        return regions;
+    }
+
+    public String getCapital(){
+        return capital;
+    }
+
+    public void setCapital(String capital){
+        this.capital=capital;
+    }
+
+    public double getSquare(){
+        return square;
+    }
+
+    public void setSquare(double square){
+        this.square=square;
+    }
+
+
     public String getRandomWord(int length){
         String r="";
         for (int i=0; i<length; i++) {

@@ -1,9 +1,6 @@
 package fi.margokomarova.state.service;
 
-import fi.margokomarova.state.entity.District;
-import fi.margokomarova.state.entity.Region;
-import fi.margokomarova.state.entity.State;
-import fi.margokomarova.state.entity.Town;
+import fi.margokomarova.state.entity.*;
 
 public class StateService {
     public void printTown (Town town){
@@ -20,6 +17,10 @@ public class StateService {
 
     public void printState(State state){
         System.out.println(state);
+    }
+
+    public void printCitizen(Citizen citizen){
+        System.out.println(citizen);
     }
 
 

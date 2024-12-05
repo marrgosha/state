@@ -18,6 +18,7 @@ public class District {
             towns[i] = new Town();
         }
         this.towns = towns;
+
     }
 
     public Town[]getTowns(){
