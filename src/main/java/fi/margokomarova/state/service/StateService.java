@@ -23,5 +23,14 @@ public class StateService {
         System.out.println(citizen);
     }
 
+    public float calculateMeanAge(int[]ageCitizens){
+        int sum=0;
+        for (int i=0; i<ageCitizens.length; i++ ){
+            sum +=ageCitizens[i];
+        }
+        float mean=((float) sum /ageCitizens.length);
+        return mean;
+    }
+
 
 }

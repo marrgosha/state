@@ -7,6 +7,7 @@ public class Region {
     private String name;
     private static int counter=0;
     private int number;
+    private String centreName;
 
     public Region(){
         number = ++counter;
@@ -17,7 +18,11 @@ public class Region {
             districts[i] = new District();
         }
         this.districts=districts;
+        centreName=getRandomWord(7);
 
+    }
+    public String getCentreName(){
+        return centreName;
     }
 
     public String getRandomWord(int length){
