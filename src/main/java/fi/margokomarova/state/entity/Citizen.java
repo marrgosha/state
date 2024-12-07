@@ -63,11 +63,11 @@ public class Citizen {
 
     @Override
     public String toString() {
-        return "citizen" + id +
+        return "citizen id=" + id +
                 ",name=" + name +
                 ",surname=" + surname+
-                ",age="+age+
-                ",state="+state;
+                ",age="+age;
+                //",state="+state;
 
     }
 

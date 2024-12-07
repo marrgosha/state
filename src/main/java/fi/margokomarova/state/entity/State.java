@@ -11,7 +11,7 @@ public final class State {
 
 public State(){
     name=getRandomWord(6);
-    int regionAmount = 5+(int) (Math.random()*20);
+    int regionAmount = 5+(int) (Math.random()*1);
     Region[]regions=new Region[regionAmount];
     for (int i=0; i<regionAmount; i++) {
         regions[i] = new Region();
@@ -20,6 +20,7 @@ public State(){
     this.capital=capital;
     this.square=square;
 }
+
     public Region[]getRegions() {
         return regions;
     }

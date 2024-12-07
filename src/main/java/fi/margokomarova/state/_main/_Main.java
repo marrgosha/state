@@ -14,7 +14,7 @@ public class _Main {
         state.setCapital("Golden");
         state.setSquare(38500);
         //Citizen citizen=new Citizen();
-        int citizenAmount=500+(int)(Math.random()*10000);
+        int citizenAmount=500+(int)(Math.random()*1000);
         System.out.println(citizenAmount);
         Citizen[]stateCitizens=new Citizen[citizenAmount];
         int [] ageCitizens=new int [citizenAmount];
@@ -26,10 +26,6 @@ public class _Main {
        // for (Citizen element:stateCitizens){
             //System.out.println(element);
 
-
-
-
-
         StateService service=new StateService();
 
         //Region region=new Region();
@@ -39,6 +35,7 @@ public class _Main {
         //service.printDistrict(district);
         //service.printState(state);
         //service.printCitizen(citizen);
+        service.printFirstCharacterCitizens(stateCitizens);
 
         System.out.println("Enter one of the following commands:");
         System.out.println("1-print the capital");
@@ -67,6 +64,11 @@ public class _Main {
                 System.out.println("regional centres are "+ Arrays.toString(state.getRegions()));
             }else if (choiceEntry==5){
                 System.out.println("medium citizen age is "+ service.calculateMeanAge(ageCitizens));
+            }else {
+                //Scanner choice1=new Scanner(System.in);
+                //System.out.println("Enter n number");
+
+
             }
 
 

@@ -37,8 +37,8 @@ public class Region {
     public String toString(){
         return "\nRegion{"+
                 "number="+number+
-                ",name="+name+
-                ",districts="+ Arrays.toString(districts)+
+                ",centre name="+centreName+
+                //",districts="+ Arrays.toString(districts)+
                 "}";
     }
 }
