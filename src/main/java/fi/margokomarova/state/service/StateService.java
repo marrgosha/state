@@ -49,7 +49,17 @@ public class StateService {
         }
     }
 
+    public void printCertainLengthNameCitizens(Citizen[]stateCitizens){
+        System.out.println("Enter citizen name length: from 5 to 10");
+        Scanner n=new Scanner(System.in);
+        int clientEntry=n.nextInt();
+        for (int i=0; i<stateCitizens.length; i++){
+            if (stateCitizens[i].getName().length()==clientEntry){
+                System.out.println(stateCitizens[i]);
+            }
+        }
 
+    }
 
 
 

@@ -35,7 +35,7 @@ public class _Main {
         //service.printDistrict(district);
         //service.printState(state);
         //service.printCitizen(citizen);
-        service.printFirstCharacterCitizens(stateCitizens);
+        //service.printFirstCharacterCitizens(stateCitizens);
 
         System.out.println("Enter one of the following commands:");
         System.out.println("1-print the capital");
@@ -65,10 +65,7 @@ public class _Main {
             }else if (choiceEntry==5){
                 System.out.println("medium citizen age is "+ service.calculateMeanAge(ageCitizens));
             }else {
-                //Scanner choice1=new Scanner(System.in);
-                //System.out.println("Enter n number");
-
-
+                service.printCertainLengthNameCitizens(stateCitizens);
             }
 
 

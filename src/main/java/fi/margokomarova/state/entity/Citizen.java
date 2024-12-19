@@ -1,5 +1,7 @@
 package fi.margokomarova.state.entity;
 
+import java.util.Random;
+
 public class Citizen {
     private final int id;
     private String name;
@@ -10,8 +12,8 @@ public class Citizen {
 
     public Citizen(){
         id=++counter;
-        name=getRandomName(5);
-        surname=getRandomName(8);
+        name=getRandomName();
+        surname=getRandomName();
         age=(int) (Math.random()*100);
         this.state=State.getInstance();
 
@@ -53,13 +55,19 @@ public class Citizen {
         this.state=state;
     }
 
-    public String getRandomName(int length){
+    public String getRandomName(){
+        int min=5;
+        int max=10;
+        Random gen=new Random();
+        int length=min+gen.nextInt(max-min+1);
         String r="";
         for (int i=0; i<length; i++) {
             r+=(char) (Math.random() * 26 + 97);
         }
         return r;
     }
+
+
 
     @Override
     public String toString() {
