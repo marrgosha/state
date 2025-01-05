@@ -37,22 +37,32 @@ public class _Main {
         //service.printCitizen(citizen);
         service.printFirstCharacterCitizens(stateCitizens);
 
-        System.out.println("Enter one of the following commands:");
+        /*System.out.println("Enter one of the following commands:");
         System.out.println("1-print the capital");
         System.out.println("2-number of regions");
         System.out.println("3-size of the state");
         System.out.println("4-regional centres");
         System.out.println("5-medium citizen age");
-        System.out.println("6-citizens with the n size names");
-        Scanner choice=new Scanner(System.in);
+        System.out.println("6-citizens with the n size names");*/
+       // Scanner choice=new Scanner(System.in);
        // System.out.println("Enter 1/2/3/4/5/6");
-        int choiceEntry= choice.nextInt();
+       // int choiceEntry= choice.nextInt();
 
         while (true){
-            if (choiceEntry<1 || choiceEntry>6){
-                System.out.println("Enter 1/2/3/4/5/6");
-                choiceEntry=choice.nextInt();
+            System.out.println("===================================");
+            System.out.println("Enter one of the following commands:");
+            System.out.println("1-print the capital");
+            System.out.println("2-number of regions");
+            System.out.println("3-size of the state");
+            System.out.println("4-regional centres");
+            System.out.println("5-medium citizen age");
+            System.out.println("6-citizens with the n size names");
+            Scanner choice=new Scanner(System.in);
+            int choiceEntry= choice.nextInt();
 
+            if (choiceEntry<1 || choiceEntry>6){
+                System.out.println("Wrong entry. Enter 1/2/3/4/5/6");
+                choiceEntry=choice.nextInt();
             }
             if(choiceEntry==1){
                 System.out.println("The name of the capital is "+state.getCapital());
@@ -64,14 +74,11 @@ public class _Main {
                 System.out.println("regional centres are "+ Arrays.toString(state.getRegions()));
             }else if (choiceEntry==5){
                 System.out.println("medium citizen age is "+ service.calculateMeanAge(ageCitizens));
-            }else if (choiceEntry==6){
+            }else {
                 service.printCertainLengthNameCitizens(stateCitizens);
-                break;
-            }else{
-               // (choiceEntry<1 || choiceEntry>6){
-                    System.out.println("Enter 1/2/3/4/5/6");
-                    choiceEntry=choice.nextInt();
             }
+
+
 
 
 
