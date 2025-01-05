@@ -15,7 +15,7 @@ public class _Main {
         state.setSquare(38500);
         //Citizen citizen=new Citizen();
         int citizenAmount=500+(int)(Math.random()*1000);
-        System.out.println(citizenAmount);
+        System.out.println("number of citizens="+citizenAmount);
         Citizen[]stateCitizens=new Citizen[citizenAmount];
         int [] ageCitizens=new int [citizenAmount];
         for (int i=0; i<citizenAmount; i++) {
@@ -35,7 +35,7 @@ public class _Main {
         //service.printDistrict(district);
         //service.printState(state);
         //service.printCitizen(citizen);
-        //service.printFirstCharacterCitizens(stateCitizens);
+        service.printFirstCharacterCitizens(stateCitizens);
 
         System.out.println("Enter one of the following commands:");
         System.out.println("1-print the capital");
@@ -45,7 +45,7 @@ public class _Main {
         System.out.println("5-medium citizen age");
         System.out.println("6-citizens with the n size names");
         Scanner choice=new Scanner(System.in);
-        System.out.println("Enter 1/2/3/4/5/6");
+       // System.out.println("Enter 1/2/3/4/5/6");
         int choiceEntry= choice.nextInt();
 
         while (true){
@@ -54,7 +54,7 @@ public class _Main {
                 choiceEntry=choice.nextInt();
 
             }
-            else if(choiceEntry==1){
+            if(choiceEntry==1){
                 System.out.println("The name of the capital is "+state.getCapital());
             } else if (choiceEntry==2) {
                 System.out.println("The number of regions is "+state.getRegions().length);
@@ -64,8 +64,13 @@ public class _Main {
                 System.out.println("regional centres are "+ Arrays.toString(state.getRegions()));
             }else if (choiceEntry==5){
                 System.out.println("medium citizen age is "+ service.calculateMeanAge(ageCitizens));
-            }else {
+            }else if (choiceEntry==6){
                 service.printCertainLengthNameCitizens(stateCitizens);
+                break;
+            }else{
+               // (choiceEntry<1 || choiceEntry>6){
+                    System.out.println("Enter 1/2/3/4/5/6");
+                    choiceEntry=choice.nextInt();
             }
 
 

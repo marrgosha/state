@@ -36,13 +36,13 @@ public class StateService {
     }
 
     public void printFirstCharacterCitizens(Citizen[]stateCitizens){
-        //Scanner m=new Scanner(System.in);
-        //System.out.println("Enter first letter of citizen name");
-        //char clientEntry=;
+        Scanner m=new Scanner(System.in);
+        System.out.println("Enter first letter of citizen name");
+        char clientEntry=m.next().charAt(0);
         for (int i=0; i<stateCitizens.length; i++){
             char firstLetter;
             firstLetter=stateCitizens[i].getName().charAt(0);
-            if (firstLetter==109){
+            if (firstLetter==clientEntry){
                 System.out.println(stateCitizens[i]);
             }
 
