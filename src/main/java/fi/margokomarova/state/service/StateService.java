@@ -37,8 +37,11 @@ public class StateService {
 
     public void printFirstCharacterCitizens(Citizen[]stateCitizens){
         Scanner m=new Scanner(System.in);
-        System.out.println("Enter first letter of citizen name");
+        System.out.println("Enter first small letter of citizen name");
         char clientEntry=m.next().charAt(0);
+        if (clientEntry<97||clientEntry>122){
+            System.out.println("Wrong first character");
+        }
         for (int i=0; i<stateCitizens.length; i++){
             char firstLetter;
             firstLetter=stateCitizens[i].getName().charAt(0);
