@@ -4,6 +4,7 @@
 
 *to work with collections
 *to create a hierarchical project structure with packages
+
 *to learn programming patterns
 *to learn testNG
 
