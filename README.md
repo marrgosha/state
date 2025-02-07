@@ -11,6 +11,7 @@
 *to learn testNG
 
 <ins> Project description:</ins>
+
 Class State is created using Singleton pattern and classes Town, District, Region. Class Citizen should have id, name, surname, age and State.
 Collections are created and filled with objects of Citizen class.
 User's menu contains following options for printing:
