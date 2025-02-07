@@ -2,13 +2,10 @@
 
 <ins> Project aim: </ins>
 
--to work with collections
-
--to create a hierarchical project structure with packages
-
--to learn programming patterns
-
--to learn testNG
+*to work with collections
+*to create a hierarchical project structure with packages
+*to learn programming patterns
+*to learn testNG
 
 <ins> Project description:</ins>
 Class State is created using Singleton pattern and classes Town, District, Region. Class Citizen should have id, name, surname, age and State.
